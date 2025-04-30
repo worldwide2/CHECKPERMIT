@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Permissão de Trabalho em Portugal</title>
+  <style>
+    body {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+    }
+    button {
+      cursor: pointer;
+      background: #4CAF50;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #result {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    img {
+      width: 300px;
+      border-radius: 8px;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Verificação de Permissão de Trabalho em Portugal</h2>
+  <input type="text" id="pinInput" placeholder="Digite o número PIN" maxlength="4">
+  <button onclick="checkPin()">Verificar</button>
+
+  <div id="result">
+    <h3>Suas informações:</h3>
+    <img id="permitImage" src="" alt="Work permit">
+  </div>
+
+  <script>
+    function checkPin() {
+      var pin = document.getElementById("pinInput").value;
+      var image = document.getElementById("permitImage");
+      var result = document.getElementById("result");
+
+      if (pin === "1234") {
+        image.src = "oiu.jpg";
+        result.style.display = "block";
+      } else if (pin === "5678") {
+        image.src = "usa_permit2.jpg";
+        result.style.display = "block";
+      } else  if (pin === "7789") {
+        image.src = "usa_permit2.jpg";
+        result.style.display = "block";
+      } else if (pin === "5678") {
+        image.src = "usa_permit2.jpg";
+        result.style.display = "block";
+      } else 
+
+
+
+
+
+      {
+        alert("Número de código errado।");
+        result.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
