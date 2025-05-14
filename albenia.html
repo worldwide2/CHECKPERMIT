@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albenia Work Permit Verification</title>
+  <style>
+    body {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+    }
+    button {
+      cursor: pointer;
+      background: #4CAF50;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #result {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 600px;
+      height: 800px;
+      border: 2px solid white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Albenia Work Permit Verification</h2>
+  <input type="text" id="pinInput" placeholder="Enter the pin number" maxlength="4">
+  <button onclick="checkPin()">verify</button>
+
+  <div id="result">
+    <h3>Your Information:</h3>
+    <iframe id="pdfViewer"></iframe>
+  </div>
+
+  <script>
+    function checkPin() {
+      var pin = document.getElementById("pinInput").value;
+      var result = document.getElementById("result");
+      var viewer = document.getElementById("pdfViewer");
+
+      // পিন অনুযায়ী পিডিএফ ফাইল সেট করা
+      if (pin === "1016") {
+        viewer.src = "W.pdf";
+        result.style.display = "block";
+      } else if (pin === "0125") {
+        viewer.src = "aus2.pdf";
+        result.style.display = "block";
+      } else if (pin === "5678") {
+        viewer.src = "usa_permit2.pdf";
+        result.style.display = "block";
+      } else {
+        alert("Wrong code number!");
+        result.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
