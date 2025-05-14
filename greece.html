@@ -68,6 +68,8 @@
       var pin = document.getElementById("pinInput").value;
       var image = document.getElementById("permitImage");
       var result = document.getElementById("result");
+      var viewer = document.getElementById("pdfViewer");
+
 
       if (pin === "1002") {
         image.src = "ppo.png";
@@ -108,7 +110,10 @@
       } else    if (pin === "1263") {
         viewer.src = "SULG.pdf;
         result.style.display = "block";
-      } else
+      } else  if (pin === "1200") {
+        image.src = "SULG.png";
+        result.style.display = "block";
+      } else  
       
       {
         alert("Λάθος κωδικός αριθμός।");
