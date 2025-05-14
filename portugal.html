@@ -44,10 +44,11 @@
       margin-top: 20px;
       text-align: center;
     }
-    img {
+    img, iframe {
       width: 300px;
       border-radius: 8px;
       border: 2px solid white;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -60,33 +61,33 @@
   <div id="result">
     <h3>Suas informações:</h3>
     <img id="permitImage" src="" alt="Work permit">
+    <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
   </div>
 
   <script>
     function checkPin() {
-      var pin = document.getElementById("pinInput").value;
-      var image = document.getElementById("permitImage");
-      var result = document.getElementById("result");
+      const pin = document.getElementById("pinInput").value;
+      const image = document.getElementById("permitImage");
+      const pdf = document.getElementById("pdfViewer");
+      const result = document.getElementById("result");
 
       if (pin === "2725") {
         image.src = "PRT2.png";
+        pdf.src = "PRT2.pdf";
         result.style.display = "block";
       } else if (pin === "2718") {
         image.src = "PRT3.png";
+        pdf.src = "PRT3.pdf";
         result.style.display = "block";
-      } else  if (pin === "7789") {
+      } else if (pin === "7789") {
         image.src = "usa_permit2.jpg";
+        pdf.src = "usa_permit2.pdf";
         result.style.display = "block";
       } else if (pin === "0227") {
         image.src = "PRT6.png";
+        pdf.src = "PRT6.pdf";
         result.style.display = "block";
-      } else 
-
-
-
-
-
-      {
+      } else {
         alert("Número de código errado।");
         result.style.display = "none";
       }
@@ -95,3 +96,4 @@
 
 </body>
 </html>
+
