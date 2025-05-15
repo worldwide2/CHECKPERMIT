@@ -60,15 +60,13 @@
 
   <div id="result">
     <h3>Suas informações:</h3>
-    <img id="permitImage" src="" alt="Work permit">
     <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
   </div>
 
   <script>
     function checkPin() {
       const pin = document.getElementById("pinInput").value;
-      const image = document.getElementById("permitImage");
-      const pdf = document.getElementById("pdfViewer");
+          const pdf = document.getElementById("pdfViewer");
       const result = document.getElementById("result");
 
       if (pin === "2725") {
