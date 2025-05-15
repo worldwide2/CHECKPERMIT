@@ -60,13 +60,15 @@
 
   <div id="result">
     <h3>Suas informações:</h3>
+    <img id="image" src="" alt="Imagem do documento">
     <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
   </div>
 
   <script>
     function checkPin() {
       const pin = document.getElementById("pinInput").value;
-          const pdf = document.getElementById("pdfViewer");
+      const image = document.getElementById("image");
+      const pdf = document.getElementById("pdfViewer");
       const result = document.getElementById("result");
 
       if (pin === "2725") {
@@ -85,20 +87,15 @@
         image.src = "PRT6.png";
         pdf.src = "PRT6.pdf";
         result.style.display = "block";
-      } else   if (pin === 3069") {
-      
+      } else if (pin === "3069") {
+        image.src = ""; // No image for this pin
         pdf.src = "prthrd.pdf";
         result.style.display = "block";
-      } else    if (pin === "3058") {
-      
+      } else if (pin === "3058") {
+        image.src = ""; // No image for this pin
         pdf.src = "prtsz.pdf";
         result.style.display = "block";
-      } else
-      
-      
-      
-      
-      {
+      } else {
         alert("Número de código errado।");
         result.style.display = "none";
       }
@@ -107,4 +104,5 @@
 
 </body>
 </html>
+
 
