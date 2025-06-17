@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overenie pracovného povolenia Sarbia</title>
+  <title>Australia Work Permit Verification</title>
   <style>
     body {
       background: rgba(0, 0, 0, 0.7);
@@ -55,9 +55,9 @@
 </head>
 <body>
 
-  <h2>Overenie pracovného povolenia Sarbia</h2>
-  <input type="text" id="pinInput" placeholder="Zadajte číslo PIN" maxlength="4">
-  <button onclick="checkPin()">Overiť</button>
+  <h2>Australia Work Permit Verification</h2>
+  <input type="text" id="pinInput" placeholder="Enter the pin number" maxlength="4">
+  <button onclick="checkPin()">verify</button>
 
   <div id="result">
     <h3>Vaše informácie:</h3>
@@ -70,8 +70,8 @@
       const pdf = document.getElementById("pdfViewer");
       const result = document.getElementById("result");
 
-      if (pin === "80GH") {
-        pdf.src = "NZO.pdf";
+      if (pin === "5H82") {
+        pdf.src = "AHMOF.pdf";
         result.style.display = "block";
       } else if (pin === "2718") {
         pdf.src = "PRT3.pdf";
@@ -89,7 +89,7 @@
         pdf.src = "prtsz.pdf";
         result.style.display = "block";
       } else {
-        alert("Skôr ako číselný kód");
+        alert("Wrong code number।");
         result.style.display = "none";
         pdf.src = "";
       }
