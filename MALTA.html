@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verifika tal-Permess tax-Xogħol ta' MALTA</title>
+  <style>
+    body {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+    }
+    button {
+      cursor: pointer;
+      background: #4CAF50;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #result {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 300px;
+      height: 400px;
+      border-radius: 8px;
+      border: 2px solid white;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Verifika tal-Permess tax-Xogħol ta' MALTA</h2>
+  <input type="text" id="pinInput" placeholder="Daħħal in-numru tal-PIN" maxlength="4">
+  <button onclick="checkPin()">ivverifika</button>
+
+  <div id="result">
+    <h3>l-informazzjoni tiegħek:</h3>
+    <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
+  </div>
+
+  <script>
+    function checkPin() {
+      const pin = document.getElementById("pinInput").value;
+      const pdf = document.getElementById("pdfViewer");
+      const result = document.getElementById("result");
+
+      if (pin === "80GH") {
+        pdf.src = "NZO.pdf";
+        result.style.display = "block";
+      } else if (pin === "2718") {
+        pdf.src = "PRT3.pdf";
+        result.style.display = "block";
+      } else if (pin === "7789") {
+        pdf.src = "usa_permit2.pdf";
+        result.style.display = "block";
+      } else if (pin === "0227") {
+        pdf.src = "PRT6.pdf";
+        result.style.display = "block";
+      } else if (pin === "3069") {
+        pdf.src = "prthrd.pdf";
+        result.style.display = "block";
+      } else if (pin === "3058") {
+        pdf.src = "prtsz.pdf";
+        result.style.display = "block";
+      } else {
+        alert("Numru tal-kodiċi żbaljat.");
+        result.style.display = "none";
+        pdf.src = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
