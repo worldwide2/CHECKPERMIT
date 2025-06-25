@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Australia Work Permit Verification</title>
+  <title>Verifikacija radne dozvole za Srbiju</title>
   <style>
     body {
       background: rgba(0, 0, 0, 0.7);
@@ -55,8 +55,8 @@
 </head>
 <body>
 
-  <h2>Australia Work Permit Verification</h2>
-  <input type="text" id="pinInput" placeholder="Enter the pin number" maxlength="4">
+  <h2>Verifikacija radne dozvole za Srbiju</h2>
+  <input type="text" id="pinInput" placeholder="Unesite pin broj" maxlength="4">
   <button onclick="checkPin()">verify</button>
 
   <div id="result">
@@ -89,7 +89,7 @@
         pdf.src = "prtsz.pdf";
         result.style.display = "block";
       } else {
-        alert("Wrong code number।");
+        alert("Pogrešan broj koda.");
         result.style.display = "none";
         pdf.src = "";
       }
