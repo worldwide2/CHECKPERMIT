@@ -5,33 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="00p.png" />
   <title>Work permit verification</title>
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #2193b0);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: white;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 80px; /* Navbar height buffer */
-    }
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #2193b0);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* Navbar height buffer */
+}
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .marquee-wrapper {
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.marquee-wrapper {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -57,11 +61,12 @@
 
 
 .floating-image {
-  width: 250px;
+  width: 500px;
   height: auto;
   margin-bottom: 10px;
 }
 
+   
     .navbar {
       position: fixed;
       top: 0;
@@ -90,10 +95,6 @@
       color: white;
       text-shadow: 1px 1px 3px black;
     }
-#changing-text {
-  font-weight: bold;
-  transition: opacity 0.5s ease-in-out;
-}
 
     .nav-links {
       list-style: none;
@@ -200,9 +201,7 @@
 
 
   <nav class="navbar">
-     <div class="nav-logo">
-    <i class="fas fa-globe"></i>
-    <span id="changing-text">Verify Your Offer Letter</span></div>
+    <div class="nav-logo"><i class="fas fa-globe"></i> Verify Your Offer Letter </div>
     <ul class="nav-links">
       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
       <li><a href="Countries.html"><i class="fas fa-flag"></i> Countries</a></li>
@@ -210,21 +209,13 @@
     </ul>
   </nav>
 
-
 <div class="marquee-wrapper">
   <div class="marquee-text"><h3><b>You can check your offer letter here. You are doing everything yourself.</h3></div>
 </div>
 
 <div class="container">
     <img src="MP.png" alt="Floating Image" class="floating-image" />
-
-
-
-<h1><b>SELECT THE COUNTRY WHOSE OFFER LETTER YOU WANT TO VERIFY.</b></h1>
-
-
-
- 
+  
   <div class="flags">
      <div class="flag" onclick="location.href='usa.html'">
     <img src="3.png" alt="USA Flag" />
@@ -239,7 +230,7 @@
   </div>
 
   <div class="flag" onclick="location.href='grm.html'">
-    <img src="7.png" alt="germany Flag" />
+    <img src="7.png" alt="germany Flag (Alt)" />
   </div>
 
   <div class="flag" onclick="location.href='RUSSIA.html'">
@@ -364,30 +355,6 @@
 
 </body>
 <script>
-const texts = [
-    "Verify Your Offer Letter",
-    "",
-    "تحقق من خطاب العرض الخاص بك",
-    "Verifica tu carta de oferta",
-    "Verifiziere deinen Angebotsbrief",
-    "Lettre d'offre de vérification"
-  ];
-
-  let index = 0;
-  const textElement = document.getElementById("changing-text");
-
-  setInterval(() => {
-    textElement.style.opacity = 0; // fade out
-
-    setTimeout(() => {
-      index = (index + 1) % texts.length;
-      textElement.textContent = texts[index];
-      textElement.style.opacity = 1; // fade in
-    }, 500);
-  }, 4000); 
-
-
-
   window.onscroll = function() {
     const navbar = document.querySelector('.navbar');
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -397,12 +364,5 @@ const texts = [
       navbar.style.transform = "translateY(0)";
     }
   };
-
-
-
-
 </script>
 </html>
-
-  
-

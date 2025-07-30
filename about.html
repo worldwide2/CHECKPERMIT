@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="00p.png" />
+  <title>Work permit verification</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #2193b0);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px; /* Navbar height buffer */
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ---------- NAVBAR STYLE START ---------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 999;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c) 1;
+      animation: border-fade 5s linear infinite;
+    }
+
+    @keyframes border-fade {
+      0% { border-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c) 1; }
+      50% { border-image: linear-gradient(to right, #2193b0, #6dd5ed, #fdbb2d) 1; }
+      100% { border-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c) 1; }
+    }
+
+    .nav-logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s, transform 0.3s;
+      position: relative;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 100%;
+      background: white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #fdbb2d;
+      transform: scale(1.1);
+    }
+
+    .nav-links li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* ---------- NAVBAR STYLE END ---------- */
+    @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    .contact {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+    .contact p {
+      margin: 5px 0;
+      }
+      .image-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; 
+      padding: 20px;
+      </style>
+      </head>
+      <body>
+
+  
+  <nav class="navbar">
+    <div class="nav-logo"><i class="fas fa-globe"></i> Verify Your Offer Letter </div>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="Countries.html"><i class="fas fa-flag"></i> Countries</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+    </ul>
+  </nav>
+  <br>
+ <img src="AUS.png" width="80px" >
+<h1>About Us</h1>
+  <div class="content">
+    <p>We are an innovative organization that provides a simple and effective platform for work permit verification. Our goal is to create a safe and reliable environment for users, enabling them to easily access information related to their work permits.</p>
+    
+    <p>Our team has deep knowledge of work permit processes in various countries, and we are continuously working to improve the quality of our services.</p>
+  </div>
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <p>For any questions or cooperation, please contact us:</p>
+    <p>Email: info@thestandardperth.com.au</p>
+    <p>Phone: +61899425882</p>
+  </div>
+ 
+<br>
+  <img src="por.png" width="80px"  >
+<h1>Sobre Nós</h1>
+  <div class="content">
+    <p>Somos uma organização inovadora que oferece uma plataforma simples e eficaz para a verificação de permissões de trabalho. Nosso objetivo é criar um ambiente seguro e confiável para os usuários, permitindo que eles acessem facilmente informações relacionadas às suas permissões de trabalho.</p>
+    
+    <p>Nossa equipe possui profundo conhecimento dos processos de permissões de trabalho em vários países e estamos continuamente trabalhando para melhorar a qualidade dos nossos serviços.</p>
+  </div>
+  <div class="contact">
+    <h2>Contato</h2>
+    <p>Para quaisquer perguntas ou cooperação, por favor, entre em contato conosco:</p>
+    <p>Email:mail@omarinheiro.com</p>
+    <p>Telefone: +351289592350</p>
+  </div>
+
+<br>
+<div class="image-row">
+    <img src="germ.png" width="80px" alt="Image 1">
+    <img src="autr.jpeg" width="80px" alt="Image 2">
+    <img src="lui.png" width="80px" alt="Image 3">
+    <img src="lu.png" width="80px" alt="Image 4">
+  </div>
+<h1>Über Uns</h1>
+  <div class="content">
+    <p>Wir sind eine innovative Organisation, die eine einfache und effektive Plattform zur Überprüfung von Arbeitserlaubnissen bereitstellt. Unser Ziel ist es, eine sichere und zuverlässige Umgebung für die Nutzer zu schaffen, in der sie leicht auf Informationen zu ihren Arbeitserlaubnissen zugreifen können.</p>
+    
+    <p>Unser Team verfügt über tiefgehendes Wissen über die Prozesse von Arbeitserlaubnissen in verschiedenen Ländern und wir arbeiten kontinuierlich daran, die Qualität unserer Dienstleistungen zu verbessern.</p>
+  </div>
+  <div class="contact">
+    <h2>Kontakt</h2>
+    <p>Für Fragen oder Kooperationen kontaktieren Sie uns bitte:</p>
+    <p>E-Mail: support@example.com</p>
+    <p>Telefon: +1234567890</p>
+  </div>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
