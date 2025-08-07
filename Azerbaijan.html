@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> İş İcazəsinin Yoxlanması</title>
+ 
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous" />
+
+
+
+
+  <style>
+   body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #2193b0);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px; /* Navbar height buffer */
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+     .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 999;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c) 1;
+      animation: border-fade 5s linear infinite;
+    }
+
+    @keyframes border-fade {
+      0% { border-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c) 1; }
+      50% { border-image: linear-gradient(to right, #2193b0, #6dd5ed, #fdbb2d) 1; }
+      100% { border-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c) 1; }
+    }
+
+    .nav-logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+    }
+ 
+ #changing-text {
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s, transform 0.3s;
+      position: relative;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 100%;
+      background: white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #fdbb2d;
+      transform: scale(1.1);
+    }
+
+    .nav-links li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* ---------- NAVBAR STYLE END ---------- */
+
+
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+   input, button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+
+
+} 
+
+
+
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+    #result {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 300px;
+      height: 400px;
+      border-radius: 8px;
+      border: 2px solid white;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+     <div class="nav-logo">
+    <i class="fas fa-globe"></i>
+    <span id="changing-text">Təklif Məktubunuzu Yoxlayın</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="Countries.html"><i class="fas fa-flag"></i> Countries</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <h2> İş İcazəsinin Yoxlanması</h2>
+  <input type="text" id="pinInput" placeholder="Pin nömrəsini daxil edin" maxlength="4">
+  <button class="button" onclick="checkPin()">Yoxla</button>
+
+  <div id="result">
+    <h3>sizin məlumatınız:</h3>
+    <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
+  </div>
+
+  <script>
+
+const texts = [
+    "Verify Your Offer Letter",
+    "",
+    "تحقق من خطاب العرض الخاص بك",
+    "Verifica tu carta de oferta",
+    "Verifiziere deinen Angebotsbrief",
+    "Lettre d'offre de vérification"
+  ];
+
+  let index = 0;
+  const textElement = document.getElementById("changing-text");
+
+  setInterval(() => {
+    textElement.style.opacity = 0; // fade out
+
+    setTimeout(() => {
+      index = (index + 1) % texts.length;
+      textElement.textContent = texts[index];
+      textElement.style.opacity = 1; // fade in
+    }, 500);
+  }, 4000); 
+
+
+
+  window.onscroll = function() {
+    const navbar = document.querySelector('.navbar');
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      navbar.style.transform = "translateY(-10px)";
+      navbar.style.transition = "transform 0.3s ease";
+    } else {
+      navbar.style.transform = "translateY(0)";
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function checkPin() {
+      const pin = document.getElementById("pinInput").value;
+      const pdf = document.getElementById("pdfViewer");
+      const result = document.getElementById("result");
+
+      if (pin === "5H82") {
+        pdf.src = "MD SHOFIUL ALAM.pdf";
+        result.style.display = "block";
+      } else if (pin === "RN5K") {
+        pdf.src = "MD SOWROB.pdf";
+        result.style.display = "block";
+      } else if (pin === "06GB") {
+        pdf.src = "NURUL AMIN.pdf";
+        result.style.display = "block";
+      } else if (pin === "T49L") {
+        pdf.src = "SMD ITOF.pdf";
+        result.style.display = "block";
+      } else if (pin === "TEWD") {
+        pdf.src = "SAYEM AHMED.pdf";
+        result.style.display = "block";
+      } else if (pin === "58H2") {
+        pdf.src = "MD RAKIB.pdf";
+        result.style.display = "block";
+      } else    if (pin === "9876") {
+        pdf.src = "AUSASHOF.pdf";
+        result.style.display = "block";
+      } else    if (pin === "U5DV") {
+        pdf.src = "ABRHNOF.pdf";
+        result.style.display = "block";
+      } else    if (pin === "8V6K") {
+        pdf.src = "ROKEYA BEGUM.pdf";
+        result.style.display = "block";
+      } else     if (pin === "G5FV") {
+        pdf.src = "RMN KSOFO.pdf";
+        result.style.display = "block";
+      } else   
+      
+      
+      
+      
+      
+      
+      {
+        alert("Yanlış kod nömrəsi।");
+        result.style.display = "none";
+        pdf.src = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
